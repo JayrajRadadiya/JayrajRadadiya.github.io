@@ -1463,10 +1463,10 @@ blockquote {
 ====================================================*/
 @media screen and (max-width: 990px){
     
-    /*.mobile {
+    .mobile {
         display: block;
     }
-    */
+    
     .menu {
         float: left!important;
         width: 100%;
