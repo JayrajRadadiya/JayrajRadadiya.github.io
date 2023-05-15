@@ -124,7 +124,7 @@ img {
     -ms-transform: rotate(-5deg);
     -o-transform: rotate(-5deg);
     transform: rotate(-5deg);
-    margin: 30px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 blockquote {
@@ -251,6 +251,7 @@ blockquote {
     -moz-animation: sequence2 0.75s ease infinite 0.375s;
 }
 
+
 @keyframes sequence1 {
 	0% {
 		height: 9px;
@@ -374,6 +375,14 @@ blockquote {
 /*====================================================
     02. Navigation
 ====================================================*/
+.typing-title p {
+    display: none;
+}
+
+.typing-title p.active {
+    display: inline;
+}
+
 .navigation-top-fixed {
     position: fixed;
     left: 0;
@@ -502,8 +511,8 @@ blockquote {
 .banner_text {
     text-align: left;
     position: absolute;
-    bottom: 80px;
-    padding-right: 20px;
+    bottom: 400px;
+    padding-right: 10px;
     z-index: 10;
 }
 
@@ -515,7 +524,8 @@ blockquote {
 
 .banner_text hr {
     width: 100px;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -525,6 +535,7 @@ blockquote {
     line-height: 38px;
     margin: 0;
 }
+
 
 /*====================================================
     04. Section About
@@ -590,7 +601,14 @@ blockquote {
     background-attachment: fixed;
     position: relative;
 }
-
+#services  h2 {
+ text-align: center;
+ color: #ffffff;
+ font-size: 35px;
+ font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+ position: relative; /* Add this line to create a stacking context */
+ z-index: 2; /* Add this line to set a higher z-index value */
+}
 .services:before {
     position: absolute;
     content: "";
@@ -720,314 +738,166 @@ blockquote {
     margin-bottom: 0;
 }
 
-/*====================================================
-    08. Section Portfolio
-====================================================*/
-.portfolio {
-    padding: 90px 0 30px;
+/*====================================================08. Section Portfolio====================================================*/
+
+#pf .slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  padding: 20px 0 0 0;
 }
 
-.portfolio-filter {
+#pf .slide-card {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff ;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+#pf .slide-card:hover {
+  transform: translateY(-5px);
+}
+
+#pf .slide-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#pf .slide-card .category {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+#pf .slide-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+#pf .slide-link {
+  width: 50%;
+}
+
+#pf .slide-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#pf .slide-card a:hover {
+  background-color: #f5f5f5;
+}
+
+#pf .prev,
+#pf .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+#pf .prev {
+  left: 0;
+}
+
+#pf .next {
+  right: 0;
+}
+
+#pf .prev:hover,
+#pf .next:hover {
+  background-color: transparent;
+}
+#pf .dots-container {
     text-align: center;
-    margin-bottom: 40px;
+    margin-top: 20px;
 }
-
-.portfolio-filter ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: inline-block;
-}
-
-.portfolio-filter ul li {
-    float: left;
-    font-size: 18px;
-    padding: 0 15px;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.portfolio-filter ul li.active {
-    text-decoration: line-through;
-}
-
-.portfolio-item {
-    margin-bottom: 30px;
-    -webkit-transition: 0.3s linear;
-    -moz-transition: 0.3s linear;
-    -ms-transition: 0.3s linear;
-    -o-transition: 0.3s linear;
-    transition: 0.3s linear;
-}
-
-.portfolio-item-inner {
-    position: relative;
-}
-
-.portfolio-item-inner a {
-    display: block;
-    overflow: hidden;
-    outline: none;
-}
-
-.portfolio-item-inner a img {
-    -webkit-transition: 0.3s linear;
-    -moz-transition: 0.3s linear;
-    -ms-transition: 0.3s linear;
-    -o-transition: 0.3s linear;
-    transition: 0.3s linear;
-}
-
-.portfolio-item-hover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: 0.3s linear;
-    -moz-transition: 0.3s linear;
-    -ms-transition: 0.3s linear;
-    -o-transition: 0.3s linear;
-    transition: 0.3s linear;
-}
-
-.portfolio-text {
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    -webkit-transition: 0.3s linear;
-    -moz-transition: 0.3s linear;
-    -ms-transition: 0.3s linear;
-    -o-transition: 0.3s linear;
-    transition: 0.3s linear;
-}
-
-.portfolio-text h3 {
-    margin: 0;
-    font-size: 24px;
-    line-height: 25px;
-    font-weight: 700;
-}
-
-.portfolio-text p {
-    margin: 0;
-    font-size: 18px;
-    line-height: 27px;
-}
-
-.portfolio-item-inner a:hover .portfolio-item-hover {
-    opacity: 1;
-    visibility: visible;
-}
-
-.portfolio-item-inner a:hover img {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-}
-
-.portfolio-item-inner a:hover .portfolio-text {
-    bottom: 20px;
-}
-
-/*====================================================
-    09. Section Hire Me
-====================================================*/
-.hire {
-    padding: 60px 0;
-    background-size: cover;
-    background-color: #bfbfbf;
-    background-attachment: fixed;
-    position: relative;
-}
-
-.hire:before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.text_hire {
-    position: relative;
-    text-align: center;
-}
-
-.text_hire h2 {
-    margin: 0;
-    font-size: 45px;
-    line-height: 48px;
-    font-weight: 700;
-}
-
-.text_hire a {
-    margin-top: 30px;
-}
-
-/*====================================================
-    10. Section Blogs
-====================================================*/
-.box-blog .blog-image a {
-    display: block;
-    -webkit-transition: 0.3s linear;
-    -moz-transition: 0.3s linear;
-    -ms-transition: 0.3s linear;
-    -o-transition: 0.3s linear;
-    transition: 0.3s linear;
-}
-
-.box-blog .blog-image a:hover {
-    opacity: 0.6;
-}
-
-.box-blog .blog-image a img {
-    width: 100%;
-}
-
-.box-blog .blog-description h3 {
-    font-size: 25px;
-    line-height: 32px;
-    margin-bottom: 10px;
-    font-weight: 700;
-    margin-top: 10px;
-}
-
-.box-blog .blog-description h3 a {
-    -webkit-transition: 0.3s linear;
-    -moz-transition: 0.3s linear;
-    -ms-transition: 0.3s linear;
-    -o-transition: 0.3s linear;
-    transition: 0.3s linear;
-    color: #141414;
-    text-decoration: none;
-}
-
-.box-blog .blog-description .meta {
-    font-size: 16px;
-    line-height: 25px;
-    font-weight: 400;
-    color: #565656;
-    font-style: italic;
-}
-
-.box-blog .blog-description .meta span {
-    vertical-align: middle;
-}
-
-.meta .icon.m-10 {
-    margin-left: 10px;
-}
-
-.box-blog .blog-description hr {
-    width: 100px;
-    margin-left: 0;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.box-blog .blog-description p {
-    font-size: 18px;
-    line-height: 27px;
-    margin-bottom: 0;
-}
-
-/*====================================================
-    11. Section Testimonial
-====================================================*/
-.testimonial {
-    padding: 60px 0 120px;
-    background-size: cover;
-    background-color: #bfbfbf;
-    background-attachment: fixed;
-    position: relative;
-}
-
-.testimonial:before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.owl-slides {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.owl-slides .items {
-    text-align: center;
-    cursor: move;
-}
-
-.owl-slides .items .photo {
-    width: 150px;
-    height: 150px;
-    -webkit-border-radius: 999px;
-    -moz-border-radius: 999px;
-    -ms-border-radius: 999px;
-    -o-border-radius: 999px;
-    border-radius: 999px;
-    overflow: hidden;
-    display: inline-block;
-}
-
-.owl-slides .items .description {
-    font-size: 18px;
-    line-height: 27px;
-    margin-bottom: 30px;
-}
-
-.owl-slides .items .who-name {
-    font-size: 18px;
-    line-height: 27px;
-    line-height: 1;
-    margin-bottom: 7px;
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
-}
-
-.owl-slides .items .company-name {
-    font-size: 18px;
-    line-height: 27px;
-}
-
-.testimonial .owl-dots {
-    position: absolute;
-    bottom: -60px;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-
-.testimonial .owl-dot {
-    display: inline-block;
-    margin-right: 13px;
-}
-
-.testimonial .owl-dot:last-child {
-    margin-right: 0;
-}
-
-.testimonial .owl-dot span {
+#pf .dot {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background: #bfbfbf;
-    border-radius: 999px;
-    border: 2px solid #bfbfbf;
+    border-radius: 50%;
+    margin: 0 4px;
+    background-color: #bbb;
 }
 
-/*====================================================
-    12. Section Contact
-====================================================*/
+#pf .active-dot {
+    background-color: ##282828;
+}
+
+
+#pf .title_section {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #ffffff;
+  margin: 5px;
+}
+
+#pf .title_section h3 {
+  font-size: 35px;
+  color: #141414;
+  margin: 0;
+  padding: 0;
+  padding-right: 10px; /* Add padding to the right side */
+  font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+  line-height: 1.42857143;
+}
+
+/* Navigation Buttons */
+#pf .navigation-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#pf .navigation-buttons button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#pf .navigation-buttons button:hover {
+  background-color: #333;
+}
+
+#space {
+    height: 150px;
+}
+#resume{
+  margin: 0;
+  padding: 8;
+}
+#pf {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*====================================================12. Section Contact====================================================*/
 .contact p {
     font-size: 18px;
     line-height: 27px;        
