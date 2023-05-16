@@ -699,6 +699,32 @@ blockquote {
     text-decoration: none;
 }
 
+
+
+#intro {
+            text-align: left;
+        }
+        
+        #intro .banner_text {
+            display: inline-block;
+        }
+        
+        #intro .typing-title {
+            display: inline-block;
+            animation: typing 3s infinite;
+        }
+        
+        @keyframes typing {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
 /*====================================================
     07. Section Fun Fact
 ====================================================*/
@@ -751,14 +777,10 @@ blockquote {
   display: none;
   text-align: center;
   padding: 20px;
-  background-color: #ffffff ;
+  background-color: #ffffff;
   border-radius: 10px;
   transition: transform 0.3s ease;
   cursor: pointer;
-}
-
-#pf .slide-card:hover {
-  transform: translateY(-5px);
 }
 
 #pf .slide-card h2 {
@@ -798,6 +820,33 @@ blockquote {
 #pf .slide-card a:hover {
   background-color: #f5f5f5;
 }
+
+@media screen and (max-width: 600px) {
+  #pf .slide-card {
+    padding: 10px;
+  }
+
+  #pf .slide-card h2 {
+    font-size: 20px;
+  }
+
+  #pf .slide-card .category {
+    font-size: 14px;
+  }
+
+  #pf .slide-card p {
+    font-size: 12px;
+  }
+
+  #pf .slide-link {
+    width: 70%;
+  }
+
+  #pf .slide-card a {
+    padding: 8px 16px;
+  }
+}
+
 
 #pf .prev,
 #pf .next {
