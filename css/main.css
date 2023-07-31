@@ -1279,6 +1279,7 @@ header .logo a {
 	header .top-bar {
 		left: 35px;
 		width: 88%;
+	}
 }
 @media only screen and (max-width:400px) {
 	header .top-bar {
