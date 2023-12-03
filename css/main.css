@@ -1236,6 +1236,7 @@ header .logo a {
 	height: auto;
 	clear: both;
 	display: none;
+	border-radius: 10px;
 }
 .main-navigation > li {
 	display: block;
