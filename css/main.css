@@ -1237,12 +1237,14 @@ header .logo a {
 	clear: both;
 	display: none;
 	border-radius: 10px;
+
 }
 .main-navigation > li {
 	display: block;
 	height: auto;
 	text-align: left;
 	padding: 0;
+
 }
 .main-navigation li a {
 	display: block;
@@ -1251,6 +1253,7 @@ header .logo a {
 	padding: 15px 0;
 	line-height: 16px;
 	border: none;
+
 }
 .main-navigation li a:hover {
 	color: #FF0077;
