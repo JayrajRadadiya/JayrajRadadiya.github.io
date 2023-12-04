@@ -1613,11 +1613,12 @@ header .logo a {
 	}
 	.intro-info img {
 		height: 17rem;
-		width: 19rem;
+		width: 18.5rem;
 		float: none;
 		display: relative;
-		border-radius: 50%;
+		border-radius: 10%;
 		margin: 0 auto;
+		margin-bottom: 25px;
 
 	}
 	.intro-info .lead {
