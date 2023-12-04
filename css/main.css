@@ -1509,16 +1509,18 @@ header .logo a {
 }
 .intro-info img {
   height: 20rem;
-  width: 22rem;
-  border-radius:50%; /* To make it a perfect circle */
-  margin: 0.9rem 0 0 0;
+  width: 21.5rem;
+  border-radius: 50%; 
+  margin:  0.9rem 1.5rem 0.9rem 0;
   float: left;
-  box-shadow: none;
-  margin-left: -100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  border: 4px solid #fff;
+  margin-left: -120px;
+  margin-top: -10px;
 }
 
 .intro-info .lead {
-	text-align: left;
+	text-align: justify-all;
 	padding-left: 13rem;
 }
 
@@ -2689,6 +2691,7 @@ footer .copyright span:last-child::after {
 	footer .copyright a {
 		font-size: 11px;
 	}
+	
 }
 
 /**
